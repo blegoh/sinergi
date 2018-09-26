@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="200dp"
+    android:layout_height="270dp"
+    android:padding="5dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/ecomImage"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:id="@+id/ecomPrice"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/yellow_circle"
+                android:padding="10dp"
+                android:text="Rp. 70.000"
+                android:textColor="#333" />
+
+            <TextView
+                android:id="@+id/ecomTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ecomImage"
+                android:layout_marginTop="5dp"
+                android:text="judul"
+                android:textColor="#333"
+                android:textSize="15dp" />
+
+            <RatingBar
+                android:id="@+id/ecomRate"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ecomTitle"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="5.0"
+                android:stepSize="1.0" />
+
+            <Button
+                android:id="@+id/btnBuy"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/ecomImage"
+                android:layout_marginTop="10dp"
+                android:background="#4a93ff"
+                android:text="beli"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

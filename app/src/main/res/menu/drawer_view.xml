@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_commerce"
+            android:icon="@drawable/ic_commerce"
+            android:title="eCommerce" />
+        <item
+            android:id="@+id/nav_quality"
+            android:icon="@drawable/ic_qc"
+            android:title="Quality" />
+        <item
+            android:id="@+id/nav_market"
+            android:icon="@drawable/ic_trend"
+            android:title="Market Trend" />
+        <item
+            android:id="@+id/nav_produksi"
+            android:icon="@drawable/ic_produksi"
+            android:title="Produksi" />
+    </group>
+
+</menu>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/list_marketAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/iv_produk"
+                android:layout_width="130dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tv_produk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_produk"
+                android:text="Judul"
+                android:textColor="#333"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:textSize="12dp"
+                android:id="@+id/tv_produkPcs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:text="3500 pcs Terjual"
+                android:textColor="#333" />
+
+            <RatingBar
+                android:id="@+id/rb_produk"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_produk"
+                android:layout_toRightOf="@id/iv_produk"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="5.0"
+                android:stepSize="1.0" />
+
+            <TextView
+                android:textSize="12dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tv_keterangan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rb_produk"
+                android:layout_toRightOf="@id/iv_produk"
+                android:text="Keterangan"
+                android:textColor="#333"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_market"
+            android:icon="@drawable/ic_trend"
+            android:title="Market" />
+        <item
+            android:id="@+id/navigation_ecom"
+            android:icon="@drawable/ic_commerce"
+            android:title="E-Commerce" />
+        <item
+            android:id="@+id/navigation_qc"
+            android:icon="@drawable/ic_qc"
+            android:title="Quality Control" />
+        <item
+            android:id="@+id/navigation_produksi"
+            android:icon="@drawable/ic_produksi"
+            android:title="Pembagian Produksi" />
+        <item
+            android:id="@+id/navigation_other"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Other" />
+    </group>
+
+</menu>
