@@ -20,7 +20,7 @@
         <item
             android:id="@+id/nav_other"
             android:icon="@drawable/ic_home_black_24dp"
-            android:title="Others"/>
+            android:title="Profil"/>
     </group>
 
 </menu>

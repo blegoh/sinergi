@@ -19,9 +19,13 @@
             android:icon="@drawable/ic_produksi"
             android:title="Pembagian Produksi" />
         <item
+            android:id="@+id/navigation_pembelian"
+            android:icon="@drawable/ic_pembelian"
+            android:title="Pembelian" />
+        <item
             android:id="@+id/navigation_other"
             android:icon="@drawable/ic_home_black_24dp"
-            android:title="Other" />
+            android:title="Profil" />
     </group>
 
 </menu>
