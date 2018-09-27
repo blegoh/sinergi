@@ -1,7 +1,9 @@
 package onestep.id.sinergiin;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,6 +26,7 @@ public class Pengrajin2Fragment extends Fragment {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private List<mPengrajinEcom> list = new ArrayList<>();
+    private FloatingActionButton fab;
 
     public Pengrajin2Fragment() {
         // Required empty public constructor
@@ -41,6 +44,14 @@ public class Pengrajin2Fragment extends Fragment {
         list.add(new mPengrajinEcom("2","20.000","Bambu",""));
         adapter = new PengrajinEcomAdapter(getActivity(), list);
         recyclerView.setAdapter(adapter);
+        fab = (FloatingActionButton) view.findViewById(R.id.fabProduk);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(),pengrajinJualProduk.class);
+                startActivity(i);
+            }
+        });
         return view;
     }
 

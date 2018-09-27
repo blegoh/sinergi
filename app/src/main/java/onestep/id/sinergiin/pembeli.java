@@ -9,7 +9,7 @@ import android.widget.RelativeLayout;
 
 public class pembeli extends AppCompatActivity {
     RelativeLayout fragment;
-    android.support.v4.app.Fragment ecom, pesanan, profile;
+    android.support.v4.app.Fragment ecom, pesanan, pembelian ,profile;
 
     private BottomNavigationView.OnNavigationItemSelectedListener listener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -28,6 +28,12 @@ public class pembeli extends AppCompatActivity {
                     fragment = pesanan;
                     if (fragment == null) {
                         pesanan = new pembeliPesanan();
+                    }
+                    break;
+                case R.id.nav_pembelian:
+                    fragment = pembelian;
+                    if (fragment == null){
+                        pembelian = new pembeliPembelian();
                     }
                     break;
                 case R.id.nav_profil:
