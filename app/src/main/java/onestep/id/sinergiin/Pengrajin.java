@@ -12,6 +12,7 @@ import android.view.MenuItem;
 
 public class Pengrajin extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,7 @@ public class Pengrajin extends AppCompatActivity implements NavigationView.OnNav
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
@@ -39,25 +41,30 @@ public class Pengrajin extends AppCompatActivity implements NavigationView.OnNav
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment, pengrajin1Fragment);
             fragmentTransaction.commit();
-        } else if (id == R.id.navigation_ecom){
+        } else if (id == R.id.navigation_ecom) {
             Pengrajin2Fragment pengrajin2Fragment = new Pengrajin2Fragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment, pengrajin2Fragment);
             fragmentTransaction.commit();
-        } else if (id == R.id.navigation_qc){
+        } else if (id == R.id.navigation_qc) {
             Pengrajin3Fragment pengrajin3Fragment = new Pengrajin3Fragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment, pengrajin3Fragment);
             fragmentTransaction.commit();
-        } else if (id == R.id.navigation_produksi){
+        } else if (id == R.id.navigation_produksi) {
             Pengrajin4Fragment pengrajin4Fragment = new Pengrajin4Fragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment, pengrajin4Fragment);
             fragmentTransaction.commit();
-        } else if (id == R.id.navigation_other){
+        } else if (id == R.id.navigation_pembelian) {
             Pengrajin5Fragment pengrajin5Fragment = new Pengrajin5Fragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment, pengrajin5Fragment);
+            fragmentTransaction.commit();
+        } else if (id == R.id.navigation_other) {
+            Pengrajin6Fragment pengrajin6Fragment = new Pengrajin6Fragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment, pengrajin6Fragment);
             fragmentTransaction.commit();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -11,7 +11,7 @@ public class PengrajinDetailEcom extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pengrajin_detail_ecom);
-        buy = (Button) findViewById(R.id.btnBuy);
+        buy = (Button) findViewById(R.id.btn_beli);
         buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
