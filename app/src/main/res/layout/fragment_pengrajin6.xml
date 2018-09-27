@@ -3,10 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".adminOthers"
+    tools:context=".Pengrajin6Fragment"
     android:orientation="vertical">
-
-    <!-- TODO: Update blank fragment layout -->
 
 
     <LinearLayout
@@ -19,12 +17,12 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/iv_profil"
+            android:id="@+id/iv_pengrajin"
             android:layout_width="match_parent"
             android:layout_height="300dp"/>
 
         <TextView
-            android:id="@+id/tv_admin"
+            android:id="@+id/tv_pengrajin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Nama"/>
@@ -43,6 +41,5 @@
             android:textColor="#fff"/>
 
     </LinearLayout>
-
 
 </LinearLayout>

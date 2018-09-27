@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pengrajinDetailPesanan"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/bg_page"
+        android:layout_margin="10dp"
+        android:translationZ="5dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_diterima_green"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_dikerjakan_green"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_dikirim_green"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_check_circle_black_24dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_page"
+        android:layout_margin="10dp"
+        android:translationZ="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="Status pembuatan produk"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Konfirmasi"
+            android:translationZ="5dp"
+            android:textSize="11sp"
+            style="@style/Widget.AppCompat.Button.Colored"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

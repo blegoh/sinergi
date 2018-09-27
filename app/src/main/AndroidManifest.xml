@@ -29,7 +29,13 @@
         <activity android:name=".pembeli" />
         <activity android:name=".adminPembagianDetail" />
         <activity android:name=".pembeliDetailCommerce" />
-        <activity android:name=".pembeliPesananDetail"></activity>
+        <activity android:name=".pembeliPesananDetail" />
+        <activity android:name=".pengrajinDetailPembelian" />
+        <activity android:name=".pengrajinJualProduk" />
+        <activity android:name=".pengrajinDetailPesanan" />
+        <activity android:name=".pengrajinDetailQc" />
+        <activity android:name=".adminDetailQc" />
+        <activity android:name=".register"></activity>
     </application>
 
 </manifest>

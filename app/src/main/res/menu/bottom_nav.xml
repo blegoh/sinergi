@@ -11,6 +11,10 @@
             android:icon="@drawable/ic_qc"
             android:title="Pesanan" />
         <item
+            android:id="@+id/nav_pembelian"
+            android:icon="@drawable/ic_pembelian"
+            android:title="Pembelian" />
+        <item
             android:id="@+id/nav_profil"
             android:icon="@drawable/ic_person"
             android:title="Profil" />
