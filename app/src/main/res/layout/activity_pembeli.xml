@@ -5,11 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".pembeli">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment"
+        android:layout_above="@id/bottomNav"
+        android:background="#FFF">
+
+    </RelativeLayout>
     <android.support.design.widget.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
+        android:background="?android:attr/windowBackground"
+        android:id="@+id/bottomNav"
         app:menu="@menu/bottom_nav">
 
     </android.support.design.widget.BottomNavigationView>

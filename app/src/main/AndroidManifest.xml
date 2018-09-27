@@ -28,7 +28,8 @@
         <activity android:name=".adminDetailProduk" />
         <activity android:name=".pembeli" />
         <activity android:name=".adminPembagianDetail" />
-        <activity android:name=".pembeliDetailCommerce"></activity>
+        <activity android:name=".pembeliDetailCommerce" />
+        <activity android:name=".pembeliPesananDetail"></activity>
     </application>
 
 </manifest>
