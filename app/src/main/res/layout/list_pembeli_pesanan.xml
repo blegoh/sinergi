@@ -1,90 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-        android:id="@+id/layoutInput"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/bg_page"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp">
+
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="5dp"
-        android:translationZ="10dp"
-        android:padding="20dp">
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
 
-        <TextView
-            android:id="@+id/tv_pesan"
-            android:textSize="20dp"
-            android:text="Masukkan Pesanan "
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"/>
-        <TextView
-            android:id="@+id/tv_nama"
-            android:layout_marginTop="5dp"
-            android:text="Nama"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/tv_produk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Produk"
+                android:textColor="#333"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/tv_jumlah"
+                android:layout_below="@id/tv_produk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jumlah : 300"
+                android:textColor="#333"
+                android:textSize="15dp"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/tv_estimasi"
+                android:layout_below="@id/tv_jumlah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estimasi : 20 hari"
+                android:textColor="#333"
+                android:textSize="15dp"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/tv_verif"
+                android:layout_below="@id/tv_estimasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status : verif"
+                android:layout_alignParentRight="true"
+                android:textColor="#333"
+                android:textSize="15dp"/>
 
-        <EditText
-            android:id="@+id/txt_nama"
-            android:drawablePadding="20dp"
-            android:hint="Nama"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/tv_produk"
-            android:text="Produk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/txt_produk"
-            android:drawablePadding="20dp"
-            android:inputType="textPassword"
-            android:hint="produk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tv_jumlah"
-            android:layout_marginTop="5dp"
-            android:text="Jumlah"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/txt_jumlah"
-            android:drawablePadding="20dp"
-            android:hint="Jumlah"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/tv_date"
-            android:text="Estimasi selesai"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/txt_password"
-            android:drawablePadding="20dp"
-            android:inputType="date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/btn_pesan"
-            android:layout_marginTop="20dp"
-            android:textAllCaps="false"
-            android:translationZ="12dp"
-            android:text="Pesan"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
 </RelativeLayout>
