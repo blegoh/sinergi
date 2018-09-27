@@ -1,4 +1,4 @@
-package onestep.id.sinergiin;
+package onestep.id.sinergiin.Admin;
 
 
 import android.os.Bundle;
@@ -7,14 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import onestep.id.sinergiin.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Pengrajin6Fragment extends Fragment {
+public class adminOthers extends Fragment {
 
 
-    public Pengrajin6Fragment() {
+    public adminOthers() {
         // Required empty public constructor
     }
 
@@ -22,8 +24,8 @@ public class Pengrajin6Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pengrajin6, container, false);
+        View view = inflater.inflate(R.layout.fragment_admin_others, container, false);
+        return view;
     }
 
 }

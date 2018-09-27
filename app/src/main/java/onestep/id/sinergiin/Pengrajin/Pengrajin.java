@@ -1,28 +1,29 @@
-package onestep.id.sinergiin;
+package onestep.id.sinergiin.Pengrajin;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toolbar;
 
-public class admin extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private android.support.v7.widget.Toolbar toolbar;
+import onestep.id.sinergiin.R;
+
+public class Pengrajin extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin);
-        toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
+        setContentView(R.layout.activity_pengrajin);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        adminEcommerce adminEcommerce = new adminEcommerce();
+        Pengrajin1Fragment pengrajin1Fragment = new Pengrajin1Fragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment, adminEcommerce);
+        fragmentTransaction.replace(R.id.fragment, pengrajin1Fragment);
         fragmentTransaction.commit();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -37,30 +38,35 @@ public class admin extends AppCompatActivity implements NavigationView.OnNavigat
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.nav_commerce) {
-            adminEcommerce adminEcommerce = new adminEcommerce();
+        if (id == R.id.navigation_market) {
+            Pengrajin1Fragment pengrajin1Fragment = new Pengrajin1Fragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment, adminEcommerce);
+            fragmentTransaction.replace(R.id.fragment, pengrajin1Fragment);
             fragmentTransaction.commit();
-        } else if (id == R.id.nav_quality){
-            adminQuality adminQuality = new adminQuality();
+        } else if (id == R.id.navigation_ecom) {
+            Pengrajin2Fragment pengrajin2Fragment = new Pengrajin2Fragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment, adminQuality);
+            fragmentTransaction.replace(R.id.fragment, pengrajin2Fragment);
             fragmentTransaction.commit();
-        } else if (id == R.id.nav_market){
-            adminMarket adminMarket = new adminMarket();
+        } else if (id == R.id.navigation_qc) {
+            Pengrajin3Fragment pengrajin3Fragment = new Pengrajin3Fragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment, adminMarket);
+            fragmentTransaction.replace(R.id.fragment, pengrajin3Fragment);
             fragmentTransaction.commit();
-        } else if (id == R.id.nav_produksi){
-            adminPembagian adminPembagian = new adminPembagian();
+        } else if (id == R.id.navigation_produksi) {
+            Pengrajin4Fragment pengrajin4Fragment = new Pengrajin4Fragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment, adminPembagian);
+            fragmentTransaction.replace(R.id.fragment, pengrajin4Fragment);
             fragmentTransaction.commit();
-        } else if (id == R.id.nav_other){
-            adminOthers adminOthers = new adminOthers();
+        } else if (id == R.id.navigation_pembelian) {
+            Pengrajin5Fragment pengrajin5Fragment = new Pengrajin5Fragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment, adminOthers);
+            fragmentTransaction.replace(R.id.fragment, pengrajin5Fragment);
+            fragmentTransaction.commit();
+        } else if (id == R.id.navigation_other) {
+            Pengrajin6Fragment pengrajin6Fragment = new Pengrajin6Fragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment, pengrajin6Fragment);
             fragmentTransaction.commit();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

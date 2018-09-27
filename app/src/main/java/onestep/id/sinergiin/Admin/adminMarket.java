@@ -1,4 +1,4 @@
-package onestep.id.sinergiin;
+package onestep.id.sinergiin.Admin;
 
 
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import java.util.List;
 
 import onestep.id.sinergiin.Adapter.AdminMarketAdpater;
 import onestep.id.sinergiin.Model.mAdminMarket;
+import onestep.id.sinergiin.R;
 
 
 /**

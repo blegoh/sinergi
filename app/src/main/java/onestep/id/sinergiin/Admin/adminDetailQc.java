@@ -1,13 +1,13 @@
-package onestep.id.sinergiin;
+package onestep.id.sinergiin.Admin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class pengrajinJualProduk extends AppCompatActivity {
+public class adminDetailQc extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pengrajin_jual_produk);
+        setContentView(R.layout.activity_admin_detail_qc);
     }
 }

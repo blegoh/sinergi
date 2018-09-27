@@ -1,4 +1,4 @@
-package onestep.id.sinergiin;
+package onestep.id.sinergiin.Admin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

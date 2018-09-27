@@ -1,4 +1,4 @@
-package onestep.id.sinergiin;
+package onestep.id.sinergiin.Pengrajin;
 
 
 import android.content.Intent;
@@ -15,6 +15,7 @@ import java.util.List;
 
 import onestep.id.sinergiin.Adapter.PengrajinPembelianAdapter;
 import onestep.id.sinergiin.Model.mPengrajinPembelian;
+import onestep.id.sinergiin.R;
 
 
 /**

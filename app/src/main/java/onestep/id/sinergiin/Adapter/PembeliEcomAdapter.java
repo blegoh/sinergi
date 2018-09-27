@@ -18,7 +18,7 @@ import java.util.List;
 import onestep.id.sinergiin.AppController;
 import onestep.id.sinergiin.Model.mPembeliEcom;
 import onestep.id.sinergiin.R;
-import onestep.id.sinergiin.pembeliDetailCommerce;
+import onestep.id.sinergiin.Pembeli.pembeliDetailCommerce;
 
 public class PembeliEcomAdapter extends RecyclerView.Adapter<PembeliEcomAdapter.ViewHolder>  {
     private Activity activity;

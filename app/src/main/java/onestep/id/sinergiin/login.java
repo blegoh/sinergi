@@ -7,8 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import onestep.id.sinergiin.Admin.admin;
+import onestep.id.sinergiin.Pembeli.pembeli;
+import onestep.id.sinergiin.Pengrajin.Pengrajin;
+
 public class login extends AppCompatActivity {
-    private Button login;
+    private Button login,regis;
     private EditText txtEmail, txtPassword;
     private String email, pass;
 
@@ -23,6 +27,14 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 setLogin();
+            }
+        });
+        regis = (Button) findViewById(R.id.btn_register);
+        regis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(login.this,register.class);
+                startActivity(i);
             }
         });
     }

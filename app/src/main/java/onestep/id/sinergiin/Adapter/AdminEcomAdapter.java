@@ -18,7 +18,7 @@ import java.util.List;
 import onestep.id.sinergiin.AppController;
 import onestep.id.sinergiin.Model.mAdminEcom;
 import onestep.id.sinergiin.R;
-import onestep.id.sinergiin.adminDetailProduk;
+import onestep.id.sinergiin.Admin.adminDetailProduk;
 
 public class AdminEcomAdapter extends RecyclerView.Adapter<AdminEcomAdapter.ViewHolder> {
     private Activity activity;

@@ -17,7 +17,7 @@ import java.util.List;
 
 import onestep.id.sinergiin.AppController;
 import onestep.id.sinergiin.Model.mPengrajinEcom;
-import onestep.id.sinergiin.PengrajinDetailEcom;
+import onestep.id.sinergiin.Pengrajin.PengrajinDetailEcom;
 import onestep.id.sinergiin.R;
 
 public class PengrajinEcomAdapter extends RecyclerView.Adapter<PengrajinEcomAdapter.ViewHolder> {

@@ -1,9 +1,11 @@
-package onestep.id.sinergiin;
+package onestep.id.sinergiin.Pengrajin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import onestep.id.sinergiin.R;
 
 public class PengrajinDetailEcom extends AppCompatActivity {
     Button buy;
