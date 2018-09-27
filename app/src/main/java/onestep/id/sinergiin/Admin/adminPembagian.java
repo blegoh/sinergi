@@ -1,4 +1,4 @@
-package onestep.id.sinergiin;
+package onestep.id.sinergiin.Admin;
 
 
 import android.content.Intent;
@@ -15,6 +15,7 @@ import java.util.List;
 
 import onestep.id.sinergiin.Adapter.AdminPembagianAdapter;
 import onestep.id.sinergiin.Model.mAdminPembagian;
+import onestep.id.sinergiin.R;
 
 
 /**

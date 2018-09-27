@@ -1,7 +1,9 @@
-package onestep.id.sinergiin;
+package onestep.id.sinergiin.Pengrajin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import onestep.id.sinergiin.R;
 
 public class pengrajinDetailQc extends AppCompatActivity {
 

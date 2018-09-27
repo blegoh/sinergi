@@ -1,4 +1,4 @@
-package onestep.id.sinergiin;
+package onestep.id.sinergiin.Pembeli;
 
 
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import onestep.id.sinergiin.R;
 
 
 /**

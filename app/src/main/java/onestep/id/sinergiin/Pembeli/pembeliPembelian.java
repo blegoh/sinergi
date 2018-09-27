@@ -1,4 +1,4 @@
-package onestep.id.sinergiin;
+package onestep.id.sinergiin.Pembeli;
 
 
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import java.util.List;
 
 import onestep.id.sinergiin.Adapter.PembeliPembelianAdapter;
 import onestep.id.sinergiin.Model.mPembeliPembelian;
+import onestep.id.sinergiin.R;
 
 
 /**

@@ -22,19 +22,19 @@
             </intent-filter>
         </activity>
         <activity android:name=".login" />
-        <activity android:name=".admin" />
-        <activity android:name=".Pengrajin" />
-        <activity android:name=".PengrajinDetailEcom" />
-        <activity android:name=".adminDetailProduk" />
-        <activity android:name=".pembeli" />
-        <activity android:name=".adminPembagianDetail" />
-        <activity android:name=".pembeliDetailCommerce" />
-        <activity android:name=".pembeliPesananDetail" />
-        <activity android:name=".pengrajinDetailPembelian" />
-        <activity android:name=".pengrajinJualProduk" />
-        <activity android:name=".pengrajinDetailPesanan" />
-        <activity android:name=".pengrajinDetailQc" />
-        <activity android:name=".adminDetailQc" />
+        <activity android:name=".Admin.admin" />
+        <activity android:name=".Pengrajin.Pengrajin" />
+        <activity android:name=".Pengrajin.PengrajinDetailEcom" />
+        <activity android:name=".Admin.adminDetailProduk" />
+        <activity android:name=".Pembeli.pembeli" />
+        <activity android:name=".Admin.adminPembagianDetail" />
+        <activity android:name=".Pembeli.pembeliDetailCommerce" />
+        <activity android:name=".Pembeli.pembeliPesananDetail" />
+        <activity android:name=".Pengrajin.pengrajinDetailPembelian" />
+        <activity android:name=".Pengrajin.pengrajinJualProduk" />
+        <activity android:name=".Pengrajin.pengrajinDetailPesanan" />
+        <activity android:name=".Pengrajin.pengrajinDetailQc" />
+        <activity android:name=".Admin.adminDetailQc" />
         <activity android:name=".register"></activity>
     </application>
 

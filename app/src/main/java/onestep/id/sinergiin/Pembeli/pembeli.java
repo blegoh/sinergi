@@ -1,4 +1,4 @@
-package onestep.id.sinergiin;
+package onestep.id.sinergiin.Pembeli;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.RelativeLayout;
+
+import onestep.id.sinergiin.BottomNavigationHelper;
+import onestep.id.sinergiin.R;
 
 public class pembeli extends AppCompatActivity {
     RelativeLayout fragment;

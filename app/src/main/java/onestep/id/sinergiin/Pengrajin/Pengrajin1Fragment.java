@@ -1,4 +1,4 @@
-package onestep.id.sinergiin;
+package onestep.id.sinergiin.Pengrajin;
 
 
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import java.util.List;
 
 import onestep.id.sinergiin.Adapter.PengrajinMarketAdapter;
 import onestep.id.sinergiin.Model.mPengrajinMarket;
+import onestep.id.sinergiin.R;
 
 
 /**

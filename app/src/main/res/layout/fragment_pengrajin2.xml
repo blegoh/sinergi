@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="#fff"
     android:padding="5dp"
-    tools:context=".Pengrajin2Fragment">
+    tools:context=".Pengrajin.Pengrajin2Fragment">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

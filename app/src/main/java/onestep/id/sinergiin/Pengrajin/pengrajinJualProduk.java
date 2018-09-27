@@ -1,13 +1,15 @@
-package onestep.id.sinergiin;
+package onestep.id.sinergiin.Pengrajin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class pembeliDetailCommerce extends AppCompatActivity {
+import onestep.id.sinergiin.R;
+
+public class pengrajinJualProduk extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pembeli_detail_commerce);
+        setContentView(R.layout.activity_pengrajin_jual_produk);
     }
 }
