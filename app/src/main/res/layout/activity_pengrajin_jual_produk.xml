@@ -6,114 +6,143 @@
     android:layout_height="match_parent"
     tools:context=".Pengrajin.pengrajinJualProduk">
 
-    <LinearLayout
-        android:id="@+id/layoutInputProduk"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/bg_page"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="5dp"
-        android:translationZ="10dp"
-        android:padding="20dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tv_jualProduk"
-            android:textSize="20dp"
-            android:text="Masukkan Produk"
+        <LinearLayout
+            android:id="@+id/layoutInputProduk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"/>
-        <TextView
-            android:layout_marginTop="10dp"
-            android:id="@+id/tv_produk"
-            android:text="Produk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_page"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:translationZ="10dp">
 
-        <EditText
-            android:id="@+id/txt_produk"
-            android:drawablePadding="20dp"
-            android:inputType="textPassword"
-            android:hint="produk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tv_jumlah"
-            android:layout_marginTop="5dp"
-            android:text="Jumlah"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_jualProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Masukkan Produk"
+                android:textSize="20dp" />
 
-        <EditText
-            android:id="@+id/txt_jumlah"
-            android:drawablePadding="20dp"
-            android:hint="Jumlah"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_produk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Produk" />
 
-        <TextView
-            android:id="@+id/tv_hargaProduk"
-            android:text="Harga"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/txt_produk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="20dp"
+                android:hint="produk"
+                android:inputType="textPassword" />
 
-        <EditText
-            android:id="@+id/txt_hargaProduk"
-            android:drawablePadding="20dp"
-            android:inputType="text"
-            android:hint="Harga"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tv_beratProduk"
-            android:text="Berat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_jumlah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Jumlah" />
 
-        <EditText
-            android:id="@+id/txt_berat"
-            android:drawablePadding="20dp"
-            android:inputType="text"
-            android:hint="Berat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tv_kondisi"
-            android:text="kondisi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/txt_jumlah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="20dp"
+                android:hint="Jumlah" />
 
-        <EditText
-            android:id="@+id/txt_kondisi"
-            android:drawablePadding="20dp"
-            android:inputType="text"
-            android:hint="Kondisi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/tv_keterangan"
-            android:text="Keterangan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_hargaProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Harga" />
 
-        <EditText
-            android:id="@+id/txt_keterangan"
-            android:drawablePadding="20dp"
-            android:inputType="text"
-            android:hint="Keterangan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/btn_pesan"
-            android:layout_marginTop="20dp"
-            android:textAllCaps="false"
-            android:translationZ="12dp"
-            android:text="Jual"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/txt_hargaProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="20dp"
+                android:hint="Harga"
+                android:inputType="text" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tv_beratProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Berat" />
+
+            <EditText
+                android:id="@+id/txt_berat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="20dp"
+                android:hint="Berat"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tv_kondisi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="kondisi" />
+
+            <EditText
+                android:id="@+id/txt_kondisi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="20dp"
+                android:hint="Kondisi"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tv_keterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Keterangan" />
+
+            <EditText
+                android:id="@+id/txt_keterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="20dp"
+                android:hint="Keterangan"
+                android:inputType="text" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp" />
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/bg_login"
+                    android:src="@drawable/ic_add_black_24dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_pesan"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Jual"
+                android:textAllCaps="false"
+                android:translationZ="12dp" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
