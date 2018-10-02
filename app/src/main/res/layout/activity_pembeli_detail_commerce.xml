@@ -45,12 +45,13 @@
 
                     <TextView
                         android:id="@+id/tv_hargaProduk"
+                        android:gravity="center"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:layout_marginTop="175dp"
                         android:background="@drawable/yellow_circle"
                         android:padding="10dp"
-                        android:text="Rp. 70.000"
+                        android:text="Rp.70.000"
                         android:textColor="#333" />
 
                     <LinearLayout
@@ -65,23 +66,25 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/btn_beli"
                             android:layout_marginTop="5dp"
+                            android:textSize="10pt"
+                            android:textStyle="bold"
                             android:text="Nama Barang : " />
 
                         <TextView
-                            android:id="@+id/tv_beratProduk"
+                            android:id="@+id/tv_stok"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/tv_produk"
                             android:layout_marginTop="5dp"
-                            android:text="Berat : " />
+                            android:text="Stok : " />
 
                         <TextView
-                            android:id="@+id/tv_produkTerjual"
+                            android:id="@+id/tv_penjual"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/tv_kondisi"
                             android:layout_marginTop="5dp"
-                            android:text="Terjual : " />
+                            android:text="Penjual : " />
 
                         <TextView
                             android:id="@+id/tv_deskripsi"
@@ -92,10 +95,12 @@
                             android:text="Deskripsi : " />
 
                         <EditText
+                            android:id="@+id/et_jumlah"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:hint="Jumlah" />
+                            android:hint="Jumlah"
+                            android:inputType="number"/>
                     </LinearLayout>
                 </RelativeLayout>
             </ScrollView>
@@ -111,6 +116,7 @@
         android:padding="5dp">
 
         <Button
+            android:id="@+id/btn_cart"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -121,6 +127,7 @@
             android:textColor="#008cba" />
 
         <Button
+            android:id="@+id/btn_beli"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

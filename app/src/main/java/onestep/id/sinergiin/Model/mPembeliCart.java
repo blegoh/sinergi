@@ -1,23 +1,15 @@
 package onestep.id.sinergiin.Model;
 
 public class mPembeliCart {
-    String id, barang, penjual, jumlah, harga, img;
+    private String id;
+    private String namaProduk;
+    private String harga;
+    private String jumlahStok;
+    private String deskripsi;
+    private String thumbnailUrl;
+    private String namaPenjual;
 
-    public mPembeliCart(String id, String barang, String penjual, String jumlah, String harga, String img) {
-        this.id = id;
-        this.barang = barang;
-        this.penjual = penjual;
-        this.jumlah = jumlah;
-        this.harga = harga;
-        this.img = img;
-    }
-
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
+    public mPembeliCart() {
     }
 
     public String getId() {
@@ -28,28 +20,12 @@ public class mPembeliCart {
         this.id = id;
     }
 
-    public String getBarang() {
-        return barang;
+    public String getNamaProduk() {
+        return namaProduk;
     }
 
-    public void setBarang(String barang) {
-        this.barang = barang;
-    }
-
-    public String getPenjual() {
-        return penjual;
-    }
-
-    public void setPenjual(String penjual) {
-        this.penjual = penjual;
-    }
-
-    public String getJumlah() {
-        return jumlah;
-    }
-
-    public void setJumlah(String jumlah) {
-        this.jumlah = jumlah;
+    public void setNamaProduk(String namaProduk) {
+        this.namaProduk = namaProduk;
     }
 
     public String getHarga() {
@@ -58,5 +34,37 @@ public class mPembeliCart {
 
     public void setHarga(String harga) {
         this.harga = harga;
+    }
+
+    public String getJumlahStok() {
+        return jumlahStok;
+    }
+
+    public void setJumlahStok(String jumlahStok) {
+        this.jumlahStok = jumlahStok;
+    }
+
+    public String getDeskripsi() {
+        return deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        this.deskripsi = deskripsi;
+    }
+
+    public String getThumbnailUrl() {
+        return thumbnailUrl;
+    }
+
+    public void setThumbnailUrl(String thumbnailUrl) {
+        this.thumbnailUrl = thumbnailUrl;
+    }
+
+    public String getNamaPenjual() {
+        return namaPenjual;
+    }
+
+    public void setNamaPenjual(String namaPenjual) {
+        this.namaPenjual = namaPenjual;
     }
 }

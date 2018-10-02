@@ -26,12 +26,13 @@
 
             <TextView
                 android:id="@+id/tv_hargaProduk"
+                android:gravity="center"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="100dp"
                 android:background="@drawable/yellow_circle"
                 android:padding="10dp"
-                android:text="Rp. 70.000"
+                android:text="Rp.70.000"
                 android:textColor="#333" />
 
             <TextView

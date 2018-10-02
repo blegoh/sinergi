@@ -11,17 +11,21 @@ import android.widget.TextView;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 
+import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
 
 import onestep.id.sinergiin.AppController;
 import onestep.id.sinergiin.Model.mPembeliCart;
 import onestep.id.sinergiin.R;
+import onestep.id.sinergiin.TinyDB;
 
 public class PembeliCartAdapter extends BaseAdapter {
     private Context context;
     private List<mPembeliCart> list;
     private LayoutInflater inflater;
     ImageLoader imageLoader = AppController.getInstance().getImageLoader();
+    TinyDB tinyDB;
 
     public PembeliCartAdapter(Context context, List<mPembeliCart> list) {
         this.context = context;
@@ -46,6 +50,11 @@ public class PembeliCartAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = View.inflate(context, R.layout.list_pembeli_cart, null);
+        Locale localeID = new Locale("in", "ID");
+        NumberFormat formatRupiah = NumberFormat.getCurrencyInstance(localeID);
+
+        tinyDB = new TinyDB(context);
+
         mPembeliCart m = list.get(position);
         if (inflater == null)
             inflater = (LayoutInflater) context
@@ -61,11 +70,12 @@ public class PembeliCartAdapter extends BaseAdapter {
         TextView txtJumlah = (TextView) view.findViewById(R.id.tv_pcsPembeli);
         TextView txtHarga = (TextView) view.findViewById(R.id.tv_harga);
 
-        img.setImageUrl(m.getImg(), imageLoader);
-        txtPenjual.setText(m.getPenjual());
-        txtProduk.setText(m.getBarang());
-        txtJumlah.setText(m.getJumlah());
-        txtHarga.setText(m.getHarga());
+        String jumlah = tinyDB.getListString("jumlah").get(position).toString();
+        img.setImageUrl(m.getThumbnailUrl(), imageLoader);
+        txtPenjual.setText(m.getNamaPenjual());
+        txtProduk.setText(m.getNamaProduk());
+        txtJumlah.setText("jumlah beli : "+jumlah);
+        txtHarga.setText(formatRupiah.format(Double.parseDouble(m.getHarga()))+"/pcs");
         view.setTag(m.getId());
         return view;
     }
