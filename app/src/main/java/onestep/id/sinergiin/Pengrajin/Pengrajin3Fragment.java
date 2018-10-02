@@ -34,8 +34,8 @@ public class Pengrajin3Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pengrajin3, container, false);
         listView = (ListView) view.findViewById(R.id.listPengrajinQc);
-        list.add(new mPengrajinQc("1", "", "Lampu Bambu", "5 Oktober 2018", R.drawable.ic_check_circle_black_24dp));
-        list.add(new mPengrajinQc("2", "", "Kerajinan Bambu", "10 Oktober", R.drawable.ic_check_circle_grey_24dp));
+        list.add(new mPengrajinQc("1", "", "Lampu Bambu", "5 Oktober 2018", R.drawable.ic_check_circle_black_24dp,"Revisi"));
+        list.add(new mPengrajinQc("2", "", "Kerajinan Bambu", "10 Oktober", R.drawable.ic_check_circle_grey_24dp,"Diterima"));
         adapter = new PengrajinQcAdapter(getActivity(), list);
         listView.setAdapter(adapter);
         return view;
