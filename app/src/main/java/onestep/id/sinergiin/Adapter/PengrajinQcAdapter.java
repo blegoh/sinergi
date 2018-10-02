@@ -60,11 +60,13 @@ public class PengrajinQcAdapter extends BaseAdapter {
         TextView txtTitle = (TextView) view.findViewById(R.id.qcTitle);
         TextView txtDate = (TextView) view.findViewById(R.id.qcDate);
         ImageView qcVerif = (ImageView) view.findViewById(R.id.qcVerif);
+        TextView txtStatus = (TextView) view.findViewById(R.id.qcStatus);
 
         qcImage.setImageUrl(m.getImg(), imageLoader);
         txtTitle.setText(m.getTitle());
         txtDate.setText(m.getDate());
         qcVerif.setImageResource(m.getVerif());
+        txtStatus.setText("Status : " + m.getStatus());
         view.setTag(m.getId());
         return view;
     }
