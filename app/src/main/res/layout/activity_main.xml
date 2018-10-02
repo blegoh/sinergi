@@ -14,13 +14,13 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="500dp"
-            android:background="@drawable/slide1"/>
+            android:background="@mipmap/slide1"/>
     </LinearLayout>
 
     <ImageView
         android:layout_centerInParent="true"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:src="@drawable/logo"/>
+        android:src="@mipmap/logo"/>
 
 </RelativeLayout>

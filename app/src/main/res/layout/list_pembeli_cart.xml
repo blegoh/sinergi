@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/list_pembagianAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/iv_pembeli"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+            <TextView
+                android:id="@+id/tv_produkPembeli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:layout_toRightOf="@id/iv_pembeli"
+                android:text="Nama Barang"
+                android:textColor="#333"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_penjual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_produkPembeli"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_pembeli"
+                android:text="Nama Penjual"
+                android:textColor="#333"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tv_pcsPembeli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_penjual"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_pembeli"
+                android:text="300 pcs"
+                android:textColor="#333"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_harga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pcsPembeli"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_pembeli"
+                android:text="Harga"
+                android:textColor="#333"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
