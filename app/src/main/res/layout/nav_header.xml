@@ -25,7 +25,7 @@
         android:layout_marginTop="4dp"
         android:gravity="left"
         android:paddingBottom="4dp"
-        android:text="Admin"
+        android:text="Pengrajin"
         android:textColor="#333333"
         android:textSize="16dp"
         android:textStyle="bold" />

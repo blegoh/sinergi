@@ -25,83 +25,82 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="440dp"
             android:background="@drawable/white_shape"
             android:padding="10dp"
             android:translationZ="10dp">
 
-            <com.android.volley.toolbox.NetworkImageView
-                android:id="@+id/iv_produk"
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="250dp" />
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tv_hargaProduk"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="175dp"
-                android:background="@drawable/yellow_circle"
-                android:padding="10dp"
-                android:text="Rp. 70.000"
-                android:textColor="#333" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/iv_produk"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/btn_beli"
-                    style="@style/Widget.AppCompat.Button.Colored"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/iv_produk"
-                    android:text="Beli"
-                    android:textSize="11sp"
-                    android:translationZ="5dp" />
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/tv_produk"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/btn_beli"
-                    android:layout_marginTop="5dp"
-                    android:text="Nama Barang : " />
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/iv_produk"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp" />
 
-                <TextView
-                    android:id="@+id/tv_beratProduk"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_produk"
-                    android:layout_marginTop="5dp"
-                    android:text="Berat : " />
+                    <TextView
+                        android:id="@+id/tv_hargaProduk"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="175dp"
+                        android:background="@drawable/yellow_circle"
+                        android:padding="10dp"
+                        android:text="Rp. 70.000"
+                        android:textColor="#333" />
 
-                <TextView
-                    android:id="@+id/tv_kondisi"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_beratProduk"
-                    android:layout_marginTop="5dp"
-                    android:text="Kondisi : " />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_produk"
+                        android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tv_produkTerjual"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_kondisi"
-                    android:layout_marginTop="5dp"
-                    android:text="Terjual : " />
+                        <TextView
+                            android:id="@+id/tv_produk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/btn_beli"
+                            android:layout_marginTop="5dp"
+                            android:text="Nama Barang : " />
 
-                <TextView
-                    android:id="@+id/tv_deskripsi"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_produkTerjual"
-                    android:layout_marginTop="5dp"
-                    android:text="Deskripsi : " />
-            </LinearLayout>
+                        <TextView
+                            android:id="@+id/tv_beratProduk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_produk"
+                            android:layout_marginTop="5dp"
+                            android:text="Berat : " />
+
+                        <TextView
+                            android:id="@+id/tv_produkTerjual"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_kondisi"
+                            android:layout_marginTop="5dp"
+                            android:text="Terjual : " />
+
+                        <TextView
+                            android:id="@+id/tv_deskripsi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_produkTerjual"
+                            android:layout_marginTop="5dp"
+                            android:text="Deskripsi : " />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:hint="Jumlah" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
         </RelativeLayout>
+
     </LinearLayout>
 
     <RelativeLayout
@@ -112,10 +111,22 @@
         android:padding="5dp">
 
         <Button
-            android:text="beli"
-            android:background="@drawable/bg_login"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true" />
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/blue_border"
+            android:drawableStart="@drawable/ic_add_shopping_cart_black_24dp"
+            android:paddingLeft="10dp"
+            android:text="add to cart"
+            android:textColor="#008cba" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="#008CBA"
+            android:text="beli"
+            android:textColor="#fff" />
     </RelativeLayout>
 </RelativeLayout>
