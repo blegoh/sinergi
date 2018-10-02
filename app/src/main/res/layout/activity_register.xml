@@ -94,7 +94,7 @@
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Alamat" />
+                    android:text="No Telp" />
 
                 <EditText
                     android:id="@+id/notlp"

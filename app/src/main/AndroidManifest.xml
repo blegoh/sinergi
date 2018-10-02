@@ -35,7 +35,8 @@
         <activity android:name=".Pengrajin.pengrajinDetailPesanan" />
         <activity android:name=".Pengrajin.pengrajinDetailQc" />
         <activity android:name=".Admin.adminDetailQc" />
-        <activity android:name=".register"></activity>
+        <activity android:name=".register" />
+        <activity android:name=".PembeliInputPembelian"></activity>
     </application>
 
 </manifest>
