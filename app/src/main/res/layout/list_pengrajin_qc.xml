@@ -32,7 +32,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/qcDate"
+            android:id="@+id/qc_jumlah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/qcTitle"
@@ -47,7 +47,7 @@
             android:id="@+id/qcStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/qcDate"
+            android:layout_below="@id/qc_jumlah"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/qcImage"
             android:text="Status"

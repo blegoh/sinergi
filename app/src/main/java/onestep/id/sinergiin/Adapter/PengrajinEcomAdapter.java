@@ -13,10 +13,13 @@ import android.widget.TextView;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.List;
 
 import onestep.id.sinergiin.AppController;
 import onestep.id.sinergiin.Model.mPengrajinEcom;
+import onestep.id.sinergiin.Pembeli.pembeliDetailCommerce;
 import onestep.id.sinergiin.Pengrajin.PengrajinDetailEcom;
 import onestep.id.sinergiin.R;
 
@@ -41,16 +44,26 @@ public class PengrajinEcomAdapter extends RecyclerView.Adapter<PengrajinEcomAdap
     @Override
     public void onBindViewHolder(@NonNull final PengrajinEcomAdapter.ViewHolder holder, int position) {
         final mPengrajinEcom m = list.get(position);
-        holder.txtTitle.setText(m.getTitle());
-        holder.txtPrice.setText("Rp."+m.getPrice());
-        holder.img.setImageUrl(m.getImg(),imageLoader);
+        NumberFormat formatter = new DecimalFormat("#0,000");
+        holder.txtTitle.setText(m.getNamaProduk());
+        String price = formatter.format(Double.parseDouble(m.getHarga())).replace(",000","k");
+        holder.txtPrice.setText("Rp."+price);
+        holder.img.setImageUrl(m.getThumbnailUrl(),imageLoader);
         holder.buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(activity, PengrajinDetailEcom.class);
-                activity.startActivity(i);
+                Intent intent = new Intent(activity, PengrajinDetailEcom.class);
+                intent.putExtra("harga", m.getHarga());
+                intent.putExtra("nama_produk", m.getNamaProduk());
+                intent.putExtra("deskripsi", m.getDeskripsi());
+                intent.putExtra("foto_produk", m.getThumbnailUrl());
+                intent.putExtra("id_produk", m.getId());
+                intent.putExtra("stok", m.getJumlahStok());
+                intent.putExtra("penjual",m.getNamaPenjual());
+                activity.startActivity(intent);
             }
         });
+
     }
 
     @Override

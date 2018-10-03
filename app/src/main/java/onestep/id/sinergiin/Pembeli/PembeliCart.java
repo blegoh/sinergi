@@ -42,7 +42,7 @@ public class PembeliCart extends AppCompatActivity {
     private PembeliCartAdapter adapter;
     private List<mPembeliCart> list = new ArrayList<>();
     private List<Double> totalHarga = new ArrayList<>();
-    private double harga=0;
+    private double harga = 0;
     private TextView txtTotalHarga;
     private Button btnBayar;
 
@@ -56,13 +56,13 @@ public class PembeliCart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pembeli_cart);
         listView = (ListView) findViewById(R.id.lv_cart);
-        txtTotalHarga = (TextView)findViewById(R.id.totalHarga);
+        txtTotalHarga = (TextView) findViewById(R.id.totalHarga);
    /*     list.add(new mPembeliCart("1", "Lampu bambu", "Eldi", "10", "Rp.10.000", ""));
         list.add(new mPembeliCart("2", "Kayu", "Sofyan", "10", "Rp.20.000", ""));*/
 
 
         tinyDB = new TinyDB(getApplicationContext());
-        btnBayar=(Button)findViewById(R.id.btnBayar);
+        btnBayar = (Button) findViewById(R.id.btnBayar);
 
 
         adapter = new PembeliCartAdapter(this, list);
@@ -73,10 +73,10 @@ public class PembeliCart extends AppCompatActivity {
         btnBayar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 insert_pembelian();
 
-                /*tinyDB.remove("id_produk");
-                tinyDB.remove("jumlah");*/
+
             }
         });
     }
@@ -123,12 +123,12 @@ public class PembeliCart extends AppCompatActivity {
                                 list.add(produk);
 
                                 //System.out.println(objProduk.);
-                               double harga2 = Double.parseDouble(tinyDB.getListString("jumlah").get(i).toString().trim())*Double.parseDouble(objProduk.getString("harga").toString().trim());
+                                double harga2 = Double.parseDouble(tinyDB.getListString("jumlah").get(i).toString().trim()) * Double.parseDouble(objProduk.getString("harga").toString().trim());
                                 totalHarga.add(harga2);
                             }
 
-                            for (int i=0;i<totalHarga.size();i++){
-                                harga+=totalHarga.get(i);
+                            for (int i = 0; i < totalHarga.size(); i++) {
+                                harga += totalHarga.get(i);
                             }
 
                             txtTotalHarga.setText(formatRupiah.format(harga));
@@ -161,8 +161,7 @@ public class PembeliCart extends AppCompatActivity {
     }
 
 
-
-    public void insert_pembelian(){
+    public  void insert_pembelian() {
 
         id_user = tinyDB.getString("id_user");
         token = tinyDB.getString("token");
@@ -170,7 +169,7 @@ public class PembeliCart extends AppCompatActivity {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, BaseApi.insertBeli,
                 new Response.Listener<String>() {
                     @Override
-                    public void onResponse(String response) {
+                    public  void onResponse(String response) {
                         try {
                             JSONObject jObj = new JSONObject(response);
                             boolean status = jObj.getBoolean("status");
@@ -178,6 +177,10 @@ public class PembeliCart extends AppCompatActivity {
                                 //JSONObject user = jObj.getJSONObject("user");
                                 Toast.makeText(getApplicationContext(), "pembelian sukses", Toast.LENGTH_SHORT).show();
                                 //onBackPressed();
+                                tinyDB.remove("id_produk");
+                                tinyDB.remove("jumlah");
+                                Intent intent = new Intent(PembeliCart.this, pembeli.class);
+                                startActivity(intent);
 
 
                                 // onResume();
@@ -213,9 +216,9 @@ public class PembeliCart extends AppCompatActivity {
                 map.put("id_user", id_user);
                 map.put("token", token);
 
-                for(int i=0;i<tinyDB.getListString("id_produk").size();i++){
-                    map.put("id_produk["+i+"]",tinyDB.getListString("id_produk").get(i).toString());
-                    map.put("jumlah["+i+"]", tinyDB.getListString("jumlah").get(i).toString());
+                for (int i = 0; i < tinyDB.getListString("id_produk").size(); i++) {
+                    map.put("id_produk[" + i + "]", tinyDB.getListString("id_produk").get(i).toString());
+                    map.put("jumlah[" + i + "]", tinyDB.getListString("jumlah").get(i).toString());
                 }
 
 
@@ -226,7 +229,6 @@ public class PembeliCart extends AppCompatActivity {
 
 
 
-        Intent intent = new Intent(PembeliCart.this,pembeli.class);
     }
 
     @Override
@@ -242,5 +244,7 @@ public class PembeliCart extends AppCompatActivity {
         }
     }
 }
+
+
 
 
