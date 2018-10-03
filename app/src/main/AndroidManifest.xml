@@ -37,7 +37,7 @@
         <activity android:name=".Admin.adminDetailQc" />
         <activity android:name=".register" />
         <activity android:name=".PembeliInputPembelian" />
-        <activity android:name=".PembeliCart"></activity>
+        <activity android:name=".Pembeli.PembeliCart"></activity>
     </application>
 
 </manifest>

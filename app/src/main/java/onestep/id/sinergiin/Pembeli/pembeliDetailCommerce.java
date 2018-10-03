@@ -193,6 +193,8 @@ public class pembeliDetailCommerce extends AppCompatActivity {
 
         Toast.makeText(pembeliDetailCommerce.this, namaProduk+" berhasil ditambahkan ke cart", Toast.LENGTH_LONG).show();
 
+        Intent intent = new Intent(pembeliDetailCommerce.this,pembeli.class);
+        startActivity(intent);
 
 
     }
