@@ -8,12 +8,14 @@ public class BaseApi {
     /**
      *
      *
+     * http://192.168.137.1 LAN
      *
+     * http://209.97.170.199:8000/api/sinergiin/ => sofyan
      */
 
 
 
-    public static final String BaseURL = "http://192.168.43.241/sinergiin/";
+    public static final String BaseURL = "http://192.168.137.1/sinergiin/";
     public static final String loginURL=BaseURL+"user.php?fun=login";
     public static final String registerURL=BaseURL+"user.php?fun=register";
 
