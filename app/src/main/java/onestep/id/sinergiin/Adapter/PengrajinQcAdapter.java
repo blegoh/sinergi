@@ -58,13 +58,13 @@ public class PengrajinQcAdapter extends BaseAdapter {
 
         NetworkImageView qcImage = (NetworkImageView) view.findViewById(R.id.qcImage);
         TextView txtTitle = (TextView) view.findViewById(R.id.qcTitle);
-        TextView txtDate = (TextView) view.findViewById(R.id.qcDate);
+        TextView txtJumlah = (TextView) view.findViewById(R.id.qc_jumlah);
         ImageView qcVerif = (ImageView) view.findViewById(R.id.qcVerif);
         TextView txtStatus = (TextView) view.findViewById(R.id.qcStatus);
 
-        qcImage.setImageUrl(m.getImg(), imageLoader);
-        txtTitle.setText(m.getTitle());
-        txtDate.setText(m.getDate());
+        qcImage.setImageUrl(m.getThumbnailUrl(), imageLoader);
+        txtTitle.setText(m.getNamaProduk());
+        txtJumlah.setText("jumlah stok : "+m.getJumlahStok());
         qcVerif.setImageResource(m.getVerif());
         txtStatus.setText("Status : " + m.getStatus());
         view.setTag(m.getId());

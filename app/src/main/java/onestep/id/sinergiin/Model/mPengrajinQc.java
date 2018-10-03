@@ -1,24 +1,18 @@
 package onestep.id.sinergiin.Model;
 
 public class mPengrajinQc {
-    String id, img, title, date, status;
-    int verif;
+    private String id;
+    private String namaProduk;
+    private String jumlahStok;
+    private String harga;
+    private String thumbnailUrl;
+    private String deskripsi;
+    private String status;
+    private String namaPenjual;
+    private String catatan;
+    private int verif;
 
-    public mPengrajinQc(String id, String img, String title, String date, int verif, String status) {
-        this.id = id;
-        this.img = img;
-        this.title = title;
-        this.date = date;
-        this.verif = verif;
-        this.status = status;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
+    public mPengrajinQc() {
     }
 
     public String getId() {
@@ -29,28 +23,68 @@ public class mPengrajinQc {
         this.id = id;
     }
 
-    public String getImg() {
-        return img;
+    public String getNamaProduk() {
+        return namaProduk;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setNamaProduk(String namaProduk) {
+        this.namaProduk = namaProduk;
     }
 
-    public String getTitle() {
-        return title;
+    public String getJumlahStok() {
+        return jumlahStok;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setJumlahStok(String jumlahStok) {
+        this.jumlahStok = jumlahStok;
     }
 
-    public String getDate() {
-        return date;
+    public String getHarga() {
+        return harga;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setHarga(String harga) {
+        this.harga = harga;
+    }
+
+    public String getThumbnailUrl() {
+        return thumbnailUrl;
+    }
+
+    public void setThumbnailUrl(String thumbnailUrl) {
+        this.thumbnailUrl = thumbnailUrl;
+    }
+
+    public String getDeskripsi() {
+        return deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        this.deskripsi = deskripsi;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getNamaPenjual() {
+        return namaPenjual;
+    }
+
+    public void setNamaPenjual(String namaPenjual) {
+        this.namaPenjual = namaPenjual;
+    }
+
+    public String getCatatan() {
+        return catatan;
+    }
+
+    public void setCatatan(String catatan) {
+        this.catatan = catatan;
     }
 
     public int getVerif() {
