@@ -41,7 +41,7 @@ public class admin extends AppCompatActivity implements NavigationView.OnNavigat
         View headerView = navigationView.getHeaderView(0);
         TextView navUsername = (TextView) headerView.findViewById(R.id.headerUsername);
         tinyDB = new TinyDB(getApplicationContext());
-        navUsername.setText(tinyDB.getString("username").toString()+"(Tim Sinergi.in)");
+        navUsername.setText(tinyDB.getString("username").toString()+" (Tim Sinergi.in)");
     }
 
     @Override

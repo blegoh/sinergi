@@ -6,12 +6,50 @@
     android:orientation="vertical"
     tools:context=".Pengrajin.Pengrajin1Fragment">
 
-    <ListView
-        android:id="@+id/listPengrajinMarket"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="5dp">
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
 
-    </ListView>
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/cari"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+
+                android:hint="cari"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_search_blue_24dp"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+        <ListView
+            android:id="@+id/lv_pengrajinMarket"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </LinearLayout>
+
 
 </LinearLayout>
