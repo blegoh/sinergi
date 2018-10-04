@@ -64,26 +64,20 @@
                     android:layout_below="@id/btn_beli"
                     android:text="Nama Barang : "/>
                 <TextView
-                    android:id="@+id/tv_beratProduk"
+                    android:id="@+id/tv_stok"
                     android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_produk"
-                    android:text="Berat : "/>
+                    android:text="Stok : "/>
                 <TextView
-                    android:id="@+id/tv_kondisi"
+                    android:id="@+id/tv_penjual"
                     android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_beratProduk"
-                    android:text="Kondisi : "/>
-                <TextView
-                    android:id="@+id/tv_produkTerjual"
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_kondisi"
-                    android:text="Terjual : "/>
+                    android:text="Penjual : "/>
+
                 <TextView
                     android:id="@+id/tv_deskripsi"
                     android:layout_marginTop="5dp"

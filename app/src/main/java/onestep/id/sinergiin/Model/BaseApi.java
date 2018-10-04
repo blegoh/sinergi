@@ -26,6 +26,8 @@ public class BaseApi {
 
     public static final String getAllProductPembeliURL=BaseURL+"product.php?fun=get_all_product_pembeli";
     public static final String getAllProductPengrajinURL=BaseURL+"product.php?fun=get_all_product_pengrajin";
+    public static final String getAllProductAdminURL=BaseURL+"product.php?fun=get_all_product_admin";
+    public static final String ubahStatusProductAdminURL=BaseURL+"product.php?fun=ubah_status_product";
 
 
     public static final String insertBeli=BaseURL+"transaction.php?fun=insert_cart_pembelian";
