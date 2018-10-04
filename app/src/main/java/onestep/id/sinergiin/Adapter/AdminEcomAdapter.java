@@ -13,6 +13,8 @@ import android.widget.TextView;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.List;
 
 import onestep.id.sinergiin.AppController;
@@ -41,14 +43,23 @@ public class AdminEcomAdapter extends RecyclerView.Adapter<AdminEcomAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final mAdminEcom m = list.get(position);
-        holder.txtTitle.setText(m.getTitle());
-        holder.txtPrice.setText(m.getPrice());
-        holder.img.setImageUrl(m.getImg(),imageLoader);
+        NumberFormat formatter = new DecimalFormat("#0,000");
+        String price = formatter.format(Double.parseDouble(m.getHarga()));
+        holder.txtTitle.setText(m.getNamaProduk());
+        holder.txtPrice.setText("Rp."+price);
+        holder.img.setImageUrl(m.getThumbnailUrl(),imageLoader);
         holder.buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(activity,adminDetailProduk.class);
-                activity.startActivity(i);
+                Intent intent = new Intent(activity,adminDetailProduk.class);
+                intent.putExtra("harga", m.getHarga());
+                intent.putExtra("nama_produk", m.getNamaProduk());
+                intent.putExtra("deskripsi", m.getDeskripsi());
+                intent.putExtra("foto_produk", m.getThumbnailUrl());
+                intent.putExtra("id_produk", m.getId());
+                intent.putExtra("stok", m.getJumlahStok());
+                intent.putExtra("penjual",m.getNamaPenjual());
+                activity.startActivity(intent);
             }
         });
     }
