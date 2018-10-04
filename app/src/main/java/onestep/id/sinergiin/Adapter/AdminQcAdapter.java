@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -59,13 +60,20 @@ public class AdminQcAdapter extends BaseAdapter {
         if (imageLoader == null)
             imageLoader = AppController.getInstance().getImageLoader();
 
-        NetworkImageView img = (NetworkImageView) view.findViewById(R.id.iv_produk);
-        TextView txtProduk = (TextView) view.findViewById(R.id.tv_produk);
-        TextView txtDate = (TextView) view.findViewById(R.id.tv_date);
+        NetworkImageView img = (NetworkImageView) view.findViewById(R.id.qcImage);
+        TextView txtProduk = (TextView) view.findViewById(R.id.qcTitle);
+        TextView txtJumlah = (TextView) view.findViewById(R.id.qc_jumlah);
+        TextView txtPengrajin = (TextView)view.findViewById(R.id.qcPengrajin);
+        ImageView qcVerif = (ImageView) view.findViewById(R.id.qcVerif);
+        TextView txtStatus = (TextView) view.findViewById(R.id.qcStatus);
 
-        txtProduk.setText(m.getTitle());
-        txtDate.setText(m.getDate());
-        img.setImageUrl(m.getImg(), imageLoader);
+        txtProduk.setText(m.getNamaProduk());
+        txtJumlah.setText(m.getJumlahStok());
+        img.setImageUrl(m.getThumbnailUrl(), imageLoader);
+        txtPengrajin.setText(m.getNamaPenjual());
+        qcVerif.setImageResource(m.getVerif());
+        txtStatus.setText("Status : " + m.getStatus());
+
         view.setTag(m.getId());
         return view;
     }
