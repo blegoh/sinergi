@@ -23,23 +23,24 @@
 
             <TextView
                 android:id="@+id/tv_produk"
-                android:layout_width="wrap_content"
+                android:layout_width="135dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/iv_produk"
                 android:text="Judul"
                 android:textColor="#333"
-                android:textSize="12dp"/>
+                android:textSize="12dp" />
 
             <TextView
-                android:textSize="12dp"
                 android:id="@+id/tv_produkPcs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginLeft="5dp"
-                android:text="3500 pcs Terjual"
-                android:textColor="#333" />
+                android:layout_alignParentEnd="true"
+
+                android:layout_alignTop="@+id/iv_produk"
+                android:text="Rp.50.000.000"
+                android:textColor="#333"
+                android:textSize="12dp" />
 
             <RatingBar
                 android:id="@+id/rb_produk"

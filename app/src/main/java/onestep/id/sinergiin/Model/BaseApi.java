@@ -16,7 +16,7 @@ public class BaseApi {
 
 
 
-    public static final String BaseURL = "http://192.168.43.241/sinergiin/";
+    public static final String BaseURL = "http://209.97.170.199:8000/api/sinergiin/";
     public static final String loginURL=BaseURL+"user.php?fun=login";
     public static final String registerURL=BaseURL+"user.php?fun=register";
 
@@ -27,6 +27,7 @@ public class BaseApi {
     public static final String getAllProductPembeliURL=BaseURL+"product.php?fun=get_all_product_pembeli";
     public static final String getAllProductPengrajinURL=BaseURL+"product.php?fun=get_all_product_pengrajin";
     public static final String getAllProductAdminURL=BaseURL+"product.php?fun=get_all_product_admin";
+    public static final String getMarketTrendURL=BaseURL+"product.php?fun=get_product_market_trend";
     public static final String ubahStatusProductAdminURL=BaseURL+"product.php?fun=ubah_status_product";
 
 

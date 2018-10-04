@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.List;
 
 import onestep.id.sinergiin.AppController;
@@ -54,16 +56,18 @@ public class AdminMarketAdpater extends BaseAdapter {
             convertView = inflater.inflate(R.layout.list_admin_market, null);
         if (imageLoader == null)
             imageLoader = AppController.getInstance().getImageLoader();
+        NumberFormat formatter = new DecimalFormat("#0,000");
+        String price = formatter.format(Double.parseDouble(m.getHarga()));
 
         NetworkImageView img = (NetworkImageView) view.findViewById(R.id.iv_produk);
         TextView txtTitle = (TextView) view.findViewById(R.id.tv_produk);
         TextView txtPcs = (TextView) view.findViewById(R.id.tv_produkPcs);
         TextView txtDesc = (TextView) view.findViewById(R.id.tv_keterangan);
 
-        txtTitle.setText(m.getTitle());
-        txtPcs.setText(m.getPcs() + " pcs terjual");
-        txtDesc.setText(m.getDesc());
-        img.setImageUrl(m.getImg(), imageLoader);
+        txtTitle.setText(m.getJudul());
+        txtPcs.setText("Rp."+price);
+        txtDesc.setText(m.getEcommerce());
+        img.setImageUrl(m.getGambar(), imageLoader);
         view.setTag(m.getId());
         return view;
     }

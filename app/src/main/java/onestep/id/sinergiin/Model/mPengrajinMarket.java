@@ -1,14 +1,9 @@
 package onestep.id.sinergiin.Model;
 
 public class mPengrajinMarket {
-    private String id, img, title, pcs, desc;
+    private String id,harga,judul,ecommerce,gambar;
 
-    public mPengrajinMarket(String id, String img, String title, String pcs, String desc) {
-        this.id = id;
-        this.img = img;
-        this.title = title;
-        this.pcs = pcs;
-        this.desc = desc;
+    public mPengrajinMarket() {
     }
 
     public String getId() {
@@ -19,35 +14,35 @@ public class mPengrajinMarket {
         this.id = id;
     }
 
-    public String getImg() {
-        return img;
+    public String getHarga() {
+        return harga;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setHarga(String harga) {
+        this.harga = harga;
     }
 
-    public String getTitle() {
-        return title;
+    public String getJudul() {
+        return judul;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setJudul(String judul) {
+        this.judul = judul;
     }
 
-    public String getPcs() {
-        return pcs;
+    public String getEcommerce() {
+        return ecommerce;
     }
 
-    public void setPcs(String pcs) {
-        this.pcs = pcs;
+    public void setEcommerce(String ecommerce) {
+        this.ecommerce = ecommerce;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getGambar() {
+        return gambar;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setGambar(String gambar) {
+        this.gambar = gambar;
     }
 }
