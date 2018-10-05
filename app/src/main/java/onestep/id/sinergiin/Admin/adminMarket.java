@@ -69,7 +69,7 @@ public class adminMarket extends Fragment {
         tinyDB = new TinyDB(getActivity());
         adapter = new AdminMarketAdpater(getActivity(),list);
         listView.setAdapter(adapter);
-
+        getMarket("kerajinan");
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
