@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import onestep.id.sinergiin.TinyDB;
 import onestep.id.sinergiin.login;
 import onestep.id.sinergiin.R;
 
@@ -18,6 +19,7 @@ import onestep.id.sinergiin.R;
  */
 public class Pengrajin6Fragment extends Fragment {
     Button btnLogout;
+    TinyDB tinyDB;
 
     public Pengrajin6Fragment() {
         // Required empty public constructor
@@ -30,10 +32,12 @@ public class Pengrajin6Fragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_pengrajin6, container, false);
         btnLogout = view.findViewById(R.id.btn_logout);
+        tinyDB = new TinyDB(getActivity());
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), login.class);
+                tinyDB.clear();
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
             }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.ImageLoader;
@@ -20,8 +21,6 @@ import onestep.id.sinergiin.R;
 public class PengrajinPembelianAdapter extends BaseAdapter {
     private Activity activity;
     private List<mPengrajinPembelian> list;
-    private LayoutInflater inflater;
-    ImageLoader imageLoader = AppController.getInstance().getImageLoader();
 
     public PengrajinPembelianAdapter(Activity activity, List<mPengrajinPembelian> list) {
         this.activity = activity;
@@ -47,25 +46,16 @@ public class PengrajinPembelianAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = View.inflate(activity, R.layout.list_pengrajin_pembelian,null);
         mPengrajinPembelian m = list.get(position);
-        if (inflater == null)
-            inflater = (LayoutInflater) activity
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        if (convertView == null)
-            convertView = inflater.inflate(R.layout.list_pengrajin_pembelian, null);
-        if (imageLoader == null)
-            imageLoader = AppController.getInstance().getImageLoader();
 
-        NetworkImageView img = (NetworkImageView) view.findViewById(R.id.iv_pembeli);
-        TextView txtPembeli = (TextView) view.findViewById(R.id.tv_pembeli);
-        TextView txtProduk = (TextView) view.findViewById(R.id.tv_produkPembeli);
-        TextView txtJumlah = (TextView) view.findViewById(R.id.tv_pcsPembeli);
-        TextView txtDurasi = (TextView) view.findViewById(R.id.tv_durasi);
+        ImageView img = (ImageView) view.findViewById(R.id.iv_verif);
+        TextView txtTransaksi = (TextView) view.findViewById(R.id.tv_transaksi);
+        TextView txtPembeli = (TextView) view.findViewById(R.id.tv_Pembeli);
+        TextView txtTotal = (TextView) view.findViewById(R.id.tv_totalHarga);
 
-        txtPembeli.setText(m.getPembeli());
-        txtJumlah.setText(m.getJumlah());
-        txtProduk.setText(m.getProduk());
-        txtDurasi.setText(m.getDurasi());
-        img.setImageUrl(m.getImg(), imageLoader);
+        txtPembeli.setText("Pembeli : "+m.getPembeli());
+        txtTransaksi.setText("No Traksaksi : "+m.getNotrans());
+        txtTotal.setText("Total Harga : "+m.getJumlah());
+        img.setImageResource(Integer.parseInt(m.getImg()));
         view.setTag(m.getId());
         return view;
     }

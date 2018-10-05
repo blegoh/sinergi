@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import onestep.id.sinergiin.R;
+import onestep.id.sinergiin.TinyDB;
 import onestep.id.sinergiin.login;
 
 
@@ -19,6 +20,7 @@ import onestep.id.sinergiin.login;
 public class pembeliProfile extends Fragment {
     Button cart;
     Button btnLogout;
+    TinyDB tinyDB;
     public pembeliProfile() {
         // Required empty public constructor
     }
@@ -29,6 +31,7 @@ public class pembeliProfile extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pembeli_profile, container, false);
         cart = (Button) view.findViewById(R.id.btnCart);
+        tinyDB = new TinyDB(getActivity());
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +45,7 @@ public class pembeliProfile extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(),login.class);
+                tinyDB.clear();
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
             }

@@ -36,9 +36,8 @@ public class Pengrajin5Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pengrajin5, container, false);
         listView = (ListView) view.findViewById(R.id.lv_Pengrajinpembelian);
-        list.add(new mPengrajinPembelian("1","","Brian","Kayu","300","20 Oktober 2018"));
-        list.add(new mPengrajinPembelian("2","","Eldi","Bambu","200", "30 Oktober 2018"));
-        list.add(new mPengrajinPembelian("3","","Sofyan","Lampu","200", "30 Oktober 2018"));
+        list.add(new mPengrajinPembelian("2",String.valueOf(R.drawable.ic_check_circle_black_24dp),"Eldi","2", "20.000"));
+        list.add(new mPengrajinPembelian("2",String.valueOf(R.drawable.ic_check_circle_black_24dp),"Sofyan","3", "30.000"));
         adapter = new PengrajinPembelianAdapter(getActivity(),list);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

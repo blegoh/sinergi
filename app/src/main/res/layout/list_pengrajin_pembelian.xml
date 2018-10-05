@@ -1,69 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <android.support.v7.widget.CardView
+        android:id="@+id/list_pembagianAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/list_pembagianAdmin"
         android:layout_margin="5dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:layout_margin="5dp">
+            android:layout_margin="5dp"
+            android:padding="5dp">
 
-            <com.android.volley.toolbox.NetworkImageView
-                android:id="@+id/iv_pembeli"
-                android:layout_width="100dp"
-                android:layout_height="100dp"/>
             <TextView
-                android:id="@+id/tv_pembeli"
+                android:id="@+id/tv_transaksi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/iv_pembeli"
-                android:text="Nama Pembeli"
+                android:text="No Transaksi"
                 android:textColor="#333"
                 android:textSize="17dp"
                 android:textStyle="bold" />
 
 
             <TextView
-                android:id="@+id/tv_produkPembeli"
+                android:id="@+id/tv_totalHarga"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_transaksi"
                 android:layout_marginLeft="10dp"
-                android:layout_below="@+id/tv_pembeli"
                 android:layout_toRightOf="@id/iv_pembeli"
-                android:text="Nama Barang"
+                android:text="Total Harga : "
                 android:textColor="#333"
                 android:textSize="17dp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tv_pcsPembeli"
+                android:id="@+id/tv_Pembeli"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_produkPembeli"
+                android:layout_below="@id/tv_totalHarga"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/iv_pembeli"
-                android:text="300 pcs"
+                android:text="Pembeli"
                 android:textColor="#333"
                 android:textSize="15dp" />
-
-            <TextView
-                android:id="@+id/tv_durasi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_pcsPembeli"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@id/iv_pembeli"
-                android:text="5 Oktober 2018"
-                android:textColor="#333"
-                android:textSize="15dp" />
+            <ImageView
+                android:id="@+id/iv_verif"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_check_circle_black_24dp"/>
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>

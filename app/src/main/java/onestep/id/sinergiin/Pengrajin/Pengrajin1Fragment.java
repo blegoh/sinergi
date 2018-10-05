@@ -70,7 +70,7 @@ public class Pengrajin1Fragment extends Fragment {
         tinyDB = new TinyDB(getActivity());
         adapter = new PengrajinMarketAdapter(getActivity(),list);
         listView.setAdapter(adapter);
-
+        getMarket("kerajinan");
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
