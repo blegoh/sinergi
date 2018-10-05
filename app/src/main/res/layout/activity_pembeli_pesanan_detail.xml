@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:drawablePadding="20dp"
                 android:hint="produk"
-                android:inputType="textPassword" />
+                android:inputType="text" />
 
             <TextView
                 android:id="@+id/tv_jumlah"
