@@ -3,9 +3,6 @@ package onestep.id.sinergiin.Model;
 public class mPengrajinPembelian {
     String id,img,pembeli,notrans,jumlah;
 
-    public mPengrajinPembelian() {
-    }
-
     public mPengrajinPembelian(String id, String img, String pembeli, String notrans, String jumlah) {
         this.id = id;
         this.img = img;

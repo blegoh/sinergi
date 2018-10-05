@@ -16,21 +16,25 @@
         android:translationZ="5dp">
 
         <ImageView
+            android:id="@+id/icon_diterima"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
             android:background="@drawable/ic_diterima_green"/>
         <ImageView
+            android:id="@+id/icon_dikerjakan"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
             android:background="@drawable/ic_dikerjakan_green"/>
         <ImageView
+            android:id="@+id/icon_pengiriman"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
             android:background="@drawable/ic_dikirim_green"/>
         <ImageView
+            android:id="@+id/icon_sukses"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
@@ -46,11 +50,13 @@
         android:orientation="vertical">
 
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:text="Status pembuatan produk"/>
 
         <Button
+            android:id="@+id/btn_konfirmasi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Konfirmasi"

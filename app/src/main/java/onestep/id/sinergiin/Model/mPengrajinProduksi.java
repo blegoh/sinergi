@@ -1,15 +1,16 @@
 package onestep.id.sinergiin.Model;
 
 public class mPengrajinProduksi {
-    String id, img, pembeli, produk, jumlah, durasi;
+    String id, img, pembeli, produk, jumlah, durasi, status;
 
-    public mPengrajinProduksi(String id, String img, String pembeli, String produk, String jumlah, String durasi) {
+    public mPengrajinProduksi(String id, String img, String pembeli, String produk, String jumlah, String durasi,String status) {
         this.id = id;
         this.img = img;
         this.pembeli = pembeli;
         this.produk = produk;
         this.jumlah = jumlah;
         this.durasi = durasi;
+        this.status = status;
     }
 
     public String getId() {
@@ -58,5 +59,13 @@ public class mPengrajinProduksi {
 
     public void setDurasi(String durasi) {
         this.durasi = durasi;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

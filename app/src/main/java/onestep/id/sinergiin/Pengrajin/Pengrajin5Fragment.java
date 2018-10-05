@@ -36,8 +36,8 @@ public class Pengrajin5Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pengrajin5, container, false);
         listView = (ListView) view.findViewById(R.id.lv_Pengrajinpembelian);
-        list.add(new mPengrajinPembelian("2",String.valueOf(R.drawable.ic_check_circle_black_24dp),"Eldi","2", "20.000"));
-        list.add(new mPengrajinPembelian("2",String.valueOf(R.drawable.ic_check_circle_black_24dp),"Sofyan","3", "30.000"));
+        list.add(new mPengrajinPembelian("1",String.valueOf(R.drawable.ic_check_circle_black_24dp),"Eldi","2", "600.000"));
+        list.add(new mPengrajinPembelian("2",String.valueOf(R.drawable.ic_check_circle_black_24dp),"Sofyan","3", "130.000"));
         adapter = new PengrajinPembelianAdapter(getActivity(),list);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -45,6 +45,9 @@ public class Pengrajin5Fragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 mPengrajinPembelian m = list.get(position);
                 Intent i = new Intent(getActivity(),pengrajinDetailPembelian.class);
+                i.putExtra("id_detil_transaksi",m.getNotrans());
+                i.putExtra("nama_pembeli",m.getPembeli());
+                i.putExtra("total_trans",m.getJumlah());
                 startActivity(i);
             }
         });
