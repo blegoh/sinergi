@@ -19,15 +19,18 @@
         android:orientation="vertical">
 
         <ImageView
+            android:background="@mipmap/abbi"
             android:id="@+id/iv_profil"
             android:layout_width="match_parent"
             android:layout_height="300dp"/>
 
         <TextView
+            android:textStyle="bold"
+            android:textSize="30sp"
             android:id="@+id/tv_admin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Nama"/>
+            android:text="Abbi (Tim Sinergi.in)"/>
 
     </LinearLayout>
     <LinearLayout

@@ -17,15 +17,18 @@
         android:orientation="vertical">
 
         <ImageView
+            android:background="@mipmap/sofyan"
             android:id="@+id/iv_pengrajin"
             android:layout_width="match_parent"
             android:layout_height="300dp"/>
 
         <TextView
+            android:textStyle="bold"
+            android:textSize="30sp"
             android:id="@+id/tv_pengrajin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Nama"/>
+            android:text="Sofyan"/>
 
     </LinearLayout>
     <LinearLayout
