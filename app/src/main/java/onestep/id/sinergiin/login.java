@@ -22,66 +22,45 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import onestep.id.sinergiin.Admin.admin;
 import onestep.id.sinergiin.Model.BaseApi;
 import onestep.id.sinergiin.Pembeli.pembeli;
 import onestep.id.sinergiin.Pengrajin.Pengrajin;
 
 public class login extends AppCompatActivity {
-    private Button login,regis;
-    private EditText txtUsername, txtPassword;
-    private String username, password,id_user,token,email,role;
+
+    @BindView(R.id.txt_username)
+    EditText txtUsername;
+
+    @BindView(R.id.txt_password)
+    EditText txtPassword;
+
+    private String username, password, id_user, token, email, role;
     private ProgressDialog pDialog;
 
     TinyDB tinyDB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        txtUsername = (EditText) findViewById(R.id.txt_username);
-        txtPassword = (EditText) findViewById(R.id.txt_password);
+        ButterKnife.bind(this);
         tinyDB = new TinyDB(getApplicationContext());
-
-        login = (Button) findViewById(R.id.btn_login);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                setLogin();
-                userLogin();
-            }
-        });
-        regis = (Button) findViewById(R.id.btn_register);
-        regis.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(login.this,register.class);
-                startActivity(i);
-            }
-        });
     }
 
-   /* private void setLogin() {
-        email = txtEmail.getText().toString().trim();
-        pass = txtPassword.getText().toString().trim();
-        tinyDB.putString("id_user","14");
-        tinyDB.putString("token","2b6898a282eece7bae4cdb706d4dcb1203433eee69d7ab317eaa081737ee5632");
-
-        if (email.equalsIgnoreCase("admin") && pass.equalsIgnoreCase("admin")) {
-            Intent i = new Intent(login.this, admin.class);
-            startActivity(i);
-            finish();
-        } else if (email.equalsIgnoreCase("pengrajin") && pass.equalsIgnoreCase("pengrajin")) {
-            Intent i = new Intent(login.this, Pengrajin.class);
-            startActivity(i);
-            finish();
-        } else if (email.equalsIgnoreCase("pembeli") && pass.equalsIgnoreCase("pembeli")) {
-            Intent i = new Intent(login.this, pembeli.class);
-            startActivity(i);
-            finish();
-        }
+    @OnClick(R.id.btn_register)
+    void register()
+    {
+        Intent i = new Intent(login.this, register.class);
+        startActivity(i);
     }
-*/
-    private void userLogin() {
+
+
+    @OnClick(R.id.btn_login)
+    void userLogin() {
         username = txtUsername.getText().toString().trim();
         password = txtPassword.getText().toString().trim();
         if (username.equalsIgnoreCase("") || password.equalsIgnoreCase("")) {
@@ -113,29 +92,22 @@ public class login extends AppCompatActivity {
                                     tinyDB.putString("email", email);
                                     tinyDB.putString("token", token);
 
-                                    if (role.equalsIgnoreCase("pembeli")){
+                                    if (role.equalsIgnoreCase("pembeli")) {
                                         Intent intent = new Intent(login.this, pembeli.class);
                                         startActivity(intent);
                                         finish();
 
-                                    }
-                                    else if(role.equalsIgnoreCase("pengrajin")){
+                                    } else if (role.equalsIgnoreCase("pengrajin")) {
                                         Intent intent = new Intent(login.this, Pengrajin.class);
                                         startActivity(intent);
                                         finish();
-                                    }
-                                    else if(role.equalsIgnoreCase("admin")){
+                                    } else if (role.equalsIgnoreCase("admin")) {
                                         Intent intent = new Intent(login.this, admin.class);
                                         startActivity(intent);
                                         finish();
-                                    }
-                                    else {
+                                    } else {
 
                                     }
-
-
-
-
 
                                 } else {
                                     // Error in login. Get the error message
